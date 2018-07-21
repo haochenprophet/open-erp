@@ -13,7 +13,7 @@ namespace n_stock_db {
 		MYSQL_ROW row;
 		unsigned int * num_fields;
 		unsigned long *lengths;
-		int silent;
+		int stock_id_type;
 	public:
 		Cstock_db();
 		~Cstock_db();
@@ -103,7 +103,27 @@ namespace n_stock_db {
 		int calculate_kp_second(void *p1, void *p2, void *p3);
 		int calculate_kp_first(void *p);
 		int calculate_kp_cmd();
+		int add_dir_second(void *p1, void *p2, void *p3);
+		int add_dir_first(void *p = nullptr);
+		int add_dir_cmd();
+		int calculate_dir_second(void *p1, void *p2, void *p3);
+		int calculate_dir_first(void *p = nullptr);
+		int calculate_dir_cmd();
+		int clear_dir_second(void *p1, void *p2, void *p3);
+		int clear_dir_first(void *p = nullptr);
+		int clear_dir_cmd();
+		int create_dir_cmd();
+		int insert_dir_id_cmd();
+		int alert_dir_key_cmd();
+		int update_dir_second(void *p1, void *p2, void *p3);
+		int update_dir_first(void *p = nullptr);
+		int update_dir_cmd();
 		int execute_add_cmd(Action * a, int count);
+		int add_type_cmd();
+		int update_type_cmd();
+		int verify_ma_second(void *p1, void *p2, void *p3);
+		int verify_ma_first(void *p = nullptr);
+		int verify_ma_cmd();
 	};
 }
 

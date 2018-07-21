@@ -40,12 +40,16 @@ typedef int(*MyFunc)(void *p); //return <0 do nothing , ==0 success, >0 fail
 int object_func(void *p);
 int runcmd(void *cmd);
 
+#ifndef OBJECT_DEBUG
+#define OBJECT_DEBUG 0//1
+#endif
+
 #define PAGE_4K	(4*1024) 
 #define O_BUF_LEN PAGE_4K
-#define AT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";
-#define OUT_LINE cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";
-#define OUT_ERROR cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;
-
+#define AT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":";}while(0);
+#define OUT_LINE do{cout<<__FILE__<<"/"<<__FUNCTION__<<":line="<<__LINE__<<"\n";}while(0);
+#define OUT_ERROR do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(1);}while(0);
+#define OUT_ERROR_N(n) do{cout<<"Error:"<<__FILE__<<"/"<<__FUNCTION__<<"/"<<__LINE__<<":"<<endl;exit(n);}while(0);
 
 namespace n_object {
 
@@ -112,6 +116,7 @@ namespace n_object {
 		long id;//object id
 	public:
 		int status;
+		int silent;//can use to print or not print
 		long long priority;
 		ACTION_T action; //bit 0-64 or 0- max [n] for action flag 
 		ActionInfo * action_info;
@@ -256,6 +261,8 @@ namespace n_object {
 		int sys_cmd(string *cmd);
 		int sys_cmd();
 		int get_cmd(int argc, char *argv[],char *cmd);
+		int list_cmd(int argc, char *argv[]);
+		int dispatch_cmd(int argc, char *argv[]);
 		int clear(void *p=nullptr);
 		//action
 		bool is_action(ACTION_T a, ACTION_T t, EatcionRelation r);//a action value ,t action type ,e operate
@@ -283,6 +290,7 @@ namespace n_object {
 		virtual int audio(void *p=nullptr);//execute object audio if exist
 		virtual int video(void *p=nullptr);//execute object vedio if exist
 		virtual int get(void *p=nullptr);
+		virtual int help(void *p = nullptr);//Can be used for command line help
 	};
 
 	class Cobject:public Object

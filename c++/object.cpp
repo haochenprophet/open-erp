@@ -4,10 +4,6 @@
 #define OBJECT_TEST 0//1
 #endif
 
-#ifndef OBJECT_DEBUG
-#define OBJECT_DEBUG 0//1
-#endif
-
 Cparameter::Cparameter()
 {
 	this->in=nullptr;
@@ -88,6 +84,7 @@ Object::Object()
 {
 	this->id = ++object_id;
 	this->status=0;
+	this->silent =0;
 	this->priority = 0;
 	this->action=0;
 	this->error=0;
@@ -101,7 +98,7 @@ Object::Object()
 	this->description=this->name;
 	this->add_ex_func("objec_func", object_func);
 	this->add_ex_func("runcmd", runcmd);
-	this->addMe();
+	//this->addMe();//remove add this to family list
 
 	time (&this->at_time);
 	this->start_time=this->at_time;
@@ -164,10 +161,10 @@ void Object::myName(Object *o)
 {
 	if(o)
 	{
-		cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id << endl;
+		cout << "name:" << o->name << " alias:"<<o->alias <<" id:"<< o->id <<" uuid:"<<o->uuid<<" at:"<<o->where()<< endl;
 		return;
 	}
-	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << endl;
+	cout << "name:" << this->name << " alias:"<<this->alias <<" id:"<< this->id << " uuid:" << this->uuid <<" at:"<<this->where()<< endl;
 }
 
 void Object::addMe(Object * o)
@@ -289,7 +286,7 @@ int Object::my_family()
 	for (it = this->family.begin(); it != this->family.end(); ++it)
 	{
 		op = (Object *)*it;
-		cout << this->name << "["<<++count <<"]->"<< op->name << ":" << op->where() << endl;
+		cout << "[" << ++count << "] "; op->myName();
 	}
 	cout << this->name << " my_family count : " << count << endl;
 	return count;
@@ -378,7 +375,9 @@ void Object::my_syntax()
 
 int Object::execute()
 {
+#if OBJECT_DEBUG
 	AT_LINE this->myName();
+#endif
 	return -1;//return -1 do nothing.
 }
 
@@ -439,13 +438,17 @@ int Object::execute(void *p)
 
 int Object::execute(void *p1,void *p2)
 {
+#if OBJECT_DEBUG
 	OUT_LINE
+#endif
 	return -1;
 }
 
 int Object::execute(void *p1,void *p2,void *p3)
 {
+#if OBJECT_DEBUG
 	OUT_LINE
+#endif
 	return -1;	
 }
 
@@ -744,7 +747,9 @@ int Object::deal_action(Action * a, int count, Object * o)
 
 int Object::do_action(void * a)
 {
-	OUT_LINE //test
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return 0;
 }
 
@@ -805,6 +810,9 @@ int Object::func(void *p)
 
 int Object::url(void *p)//execute object url if exist
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return -1;//do nothing
 }
 
@@ -815,24 +823,42 @@ int Object::style(void *p)//execute object style
 
 int Object::image(void *p)//execute object image if exist
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return -1;//do nothing
 }
 
 int Object::audio(void *p)//execute object audio if exist
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return -1;//do nothing
 }
 
 int Object::video(void *p)//execute object vedio if exist
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return -1;//do nothing
 }
 
 int Object::get(void *p)
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return -1;
 }
-
+int Object::help(void *p)
+{
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
+	return -1;
+}
 int Object::create(void *p)
 {
 	return -1;//do nothing
@@ -840,22 +866,72 @@ int Object::create(void *p)
 
 int Object::my_init(void *p)
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return -1;
 }
 
 int Object::my_exit(void *p)
 {
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return 0;
 }
 
 int Object::my_clear(void *p)
 {	
+#if OBJECT_DEBUG
+	OUT_LINE
+#endif
 	return 0;
 }
 
 int Object::clear(void *p)
 {
 	return this->my_clear(p);
+}
+
+int Object::list_cmd(int argc, char *argv[])
+{
+	do {
+		argc--;
+		cout << "argv[" << argc << "]=" << argv[argc] << endl;//list all command line
+	} while (argc>0);
+	return 0;
+}
+
+int Object::dispatch_cmd(int argc, char *argv[])//argv[1] = class name
+{
+	int ret = 0;
+	if (argc < 2) return ++ret;//return error 1
+	
+	if (this->isMe(argv[1]))
+	{
+#if OBJECT_DEBUG
+		AT_LINE this->myName();
+#endif
+		this->deal_cmd(argc - 1, &argv[1]);
+		return 0;
+	}
+
+	if (this->family.empty()) return -1;
+
+	Object *o;
+	LIST_FAMILY::iterator it;
+	for (it = this->family.begin(); it != this->family.end(); ++it)
+	{
+		o = (Object *)*it;
+#if OBJECT_DEBUG
+		AT_LINE this->myName();
+#endif
+		ret= o->dispatch_cmd(argc, argv);
+		if (ret) continue;
+		break;
+	}
+
+	return -1;
 }
 
 int Object::deal_cmd(int argc, char *argv[])
