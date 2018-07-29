@@ -39,6 +39,8 @@ namespace n_company
             this.recordRichTextBox.Height = this.workspaceTabControl.Height;
             this.messageRichTextBox.Width = this.messageTabControl.Width;
             this.messageRichTextBox.Height = this.messageTabControl.Height;
+            this.orgTreeView.Width = this.navigateTabControl.Width;
+            this.orgTreeView.Height = this.navigateTabControl.Height;
         }
 
         private void company_Load(object sender, EventArgs e)
@@ -72,7 +74,18 @@ namespace n_company
 
         private void fileToolStripButton_Click(object sender, EventArgs e)
         {
-            this.recordRichTextBox.Text += this.messageRichTextBox.Text;
+            this.recordRichTextBox.Text += this.messageRichTextBox.Text+"\n";
+            this.messageRichTextBox.Text = "";
+            try
+            {
+                this.recordRichTextBox.SelectionStart = this.recordRichTextBox.Text.Length; //Set the current caret position at the end
+                this.recordRichTextBox.ScrollToCaret(); //Now scroll it automatically
+            }
+            catch(Exception ex)
+            {
+
+            }
+
         }
     }
 }

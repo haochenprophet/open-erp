@@ -63,10 +63,11 @@
             this.organizationalTabPage = new System.Windows.Forms.TabPage();
             this.contactTabPage = new System.Windows.Forms.TabPage();
             this.messageTabControl = new System.Windows.Forms.TabControl();
-            this.messageTabPage = new System.Windows.Forms.TabPage();
+            this.inputTabPage = new System.Windows.Forms.TabPage();
             this.outputTabPage = new System.Windows.Forms.TabPage();
             this.recordRichTextBox = new System.Windows.Forms.RichTextBox();
             this.fileToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.orgTreeView = new System.Windows.Forms.TreeView();
             this.commanyMenuStrip.SuspendLayout();
             this.commanyToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigateSplitContainer)).BeginInit();
@@ -80,8 +81,9 @@
             this.workspaceTabControl.SuspendLayout();
             this.recordTabPage.SuspendLayout();
             this.navigateTabControl.SuspendLayout();
+            this.organizationalTabPage.SuspendLayout();
             this.messageTabControl.SuspendLayout();
-            this.messageTabPage.SuspendLayout();
+            this.inputTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // commanyMenuStrip
@@ -267,7 +269,7 @@
             // 
             this.navigateSplitContainer.Panel2.Controls.Add(this.workspaceSplitContainer);
             this.navigateSplitContainer.Size = new System.Drawing.Size(1328, 453);
-            this.navigateSplitContainer.SplitterDistance = 207;
+            this.navigateSplitContainer.SplitterDistance = 291;
             this.navigateSplitContainer.TabIndex = 3;
             // 
             // workspaceSplitContainer
@@ -287,7 +289,7 @@
             this.workspaceSplitContainer.Panel2.Controls.Add(this.messageTabControl);
             this.workspaceSplitContainer.Panel2.Controls.Add(this.messageToolStrip);
             this.workspaceSplitContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.workspaceSplitContainer_Panel2_Paint);
-            this.workspaceSplitContainer.Size = new System.Drawing.Size(1117, 453);
+            this.workspaceSplitContainer.Size = new System.Drawing.Size(1033, 453);
             this.workspaceSplitContainer.SplitterDistance = 243;
             this.workspaceSplitContainer.TabIndex = 0;
             // 
@@ -304,7 +306,7 @@
             // 
             this.messageToolStrip.Location = new System.Drawing.Point(0, 0);
             this.messageToolStrip.Name = "messageToolStrip";
-            this.messageToolStrip.Size = new System.Drawing.Size(1117, 25);
+            this.messageToolStrip.Size = new System.Drawing.Size(1033, 25);
             this.messageToolStrip.TabIndex = 0;
             this.messageToolStrip.Text = "toolStrip1";
             // 
@@ -327,7 +329,6 @@
             this.recordTabPage.Size = new System.Drawing.Size(1103, 215);
             this.recordTabPage.TabIndex = 0;
             this.recordTabPage.Text = "Record";
-            this.recordTabPage.UseVisualStyleBackColor = true;
             // 
             // workspaceTabPage
             // 
@@ -346,15 +347,16 @@
             this.navigateTabControl.Location = new System.Drawing.Point(5, 3);
             this.navigateTabControl.Name = "navigateTabControl";
             this.navigateTabControl.SelectedIndex = 0;
-            this.navigateTabControl.Size = new System.Drawing.Size(200, 447);
+            this.navigateTabControl.Size = new System.Drawing.Size(283, 447);
             this.navigateTabControl.TabIndex = 0;
             // 
             // organizationalTabPage
             // 
+            this.organizationalTabPage.Controls.Add(this.orgTreeView);
             this.organizationalTabPage.Location = new System.Drawing.Point(4, 22);
             this.organizationalTabPage.Name = "organizationalTabPage";
             this.organizationalTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.organizationalTabPage.Size = new System.Drawing.Size(192, 421);
+            this.organizationalTabPage.Size = new System.Drawing.Size(275, 421);
             this.organizationalTabPage.TabIndex = 0;
             this.organizationalTabPage.Text = "Organizational";
             this.organizationalTabPage.UseVisualStyleBackColor = true;
@@ -371,7 +373,7 @@
             // 
             // messageTabControl
             // 
-            this.messageTabControl.Controls.Add(this.messageTabPage);
+            this.messageTabControl.Controls.Add(this.inputTabPage);
             this.messageTabControl.Controls.Add(this.outputTabPage);
             this.messageTabControl.Location = new System.Drawing.Point(3, 28);
             this.messageTabControl.Name = "messageTabControl";
@@ -379,16 +381,16 @@
             this.messageTabControl.Size = new System.Drawing.Size(1114, 175);
             this.messageTabControl.TabIndex = 1;
             // 
-            // messageTabPage
+            // inputTabPage
             // 
-            this.messageTabPage.Controls.Add(this.messageRichTextBox);
-            this.messageTabPage.Location = new System.Drawing.Point(4, 22);
-            this.messageTabPage.Name = "messageTabPage";
-            this.messageTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.messageTabPage.Size = new System.Drawing.Size(1106, 149);
-            this.messageTabPage.TabIndex = 0;
-            this.messageTabPage.Text = "Message";
-            this.messageTabPage.UseVisualStyleBackColor = true;
+            this.inputTabPage.Controls.Add(this.messageRichTextBox);
+            this.inputTabPage.Location = new System.Drawing.Point(4, 22);
+            this.inputTabPage.Name = "inputTabPage";
+            this.inputTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.inputTabPage.Size = new System.Drawing.Size(1106, 149);
+            this.inputTabPage.TabIndex = 0;
+            this.inputTabPage.Text = "Input";
+            this.inputTabPage.UseVisualStyleBackColor = true;
             // 
             // outputTabPage
             // 
@@ -403,9 +405,9 @@
             // recordRichTextBox
             // 
             this.recordRichTextBox.Enabled = false;
-            this.recordRichTextBox.Location = new System.Drawing.Point(0, 6);
+            this.recordRichTextBox.Location = new System.Drawing.Point(0, 0);
             this.recordRichTextBox.Name = "recordRichTextBox";
-            this.recordRichTextBox.Size = new System.Drawing.Size(1098, 203);
+            this.recordRichTextBox.Size = new System.Drawing.Size(1098, 209);
             this.recordRichTextBox.TabIndex = 0;
             this.recordRichTextBox.Text = "Test text.";
             // 
@@ -418,6 +420,13 @@
             this.fileToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.fileToolStripButton.Text = "toolStripButton1";
             this.fileToolStripButton.Click += new System.EventHandler(this.fileToolStripButton_Click);
+            // 
+            // orgTreeView
+            // 
+            this.orgTreeView.Location = new System.Drawing.Point(0, 0);
+            this.orgTreeView.Name = "orgTreeView";
+            this.orgTreeView.Size = new System.Drawing.Size(275, 421);
+            this.orgTreeView.TabIndex = 0;
             // 
             // company
             // 
@@ -449,8 +458,9 @@
             this.workspaceTabControl.ResumeLayout(false);
             this.recordTabPage.ResumeLayout(false);
             this.navigateTabControl.ResumeLayout(false);
+            this.organizationalTabPage.ResumeLayout(false);
             this.messageTabControl.ResumeLayout(false);
-            this.messageTabPage.ResumeLayout(false);
+            this.inputTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,9 +502,10 @@
         private System.Windows.Forms.TabPage recordTabPage;
         private System.Windows.Forms.TabPage workspaceTabPage;
         private System.Windows.Forms.TabControl messageTabControl;
-        private System.Windows.Forms.TabPage messageTabPage;
+        private System.Windows.Forms.TabPage inputTabPage;
         private System.Windows.Forms.TabPage outputTabPage;
         private System.Windows.Forms.RichTextBox recordRichTextBox;
         private System.Windows.Forms.ToolStripButton fileToolStripButton;
+        private System.Windows.Forms.TreeView orgTreeView;
     }
 }
