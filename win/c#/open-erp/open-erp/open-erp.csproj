@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="company\company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company.Designer.cs">
+      <DependentUpon>company.cs</DependentUpon>
+    </Compile>
     <Compile Include="open_erp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="src\serial.cs" />
     <Compile Include="src\serial_data.cs" />
     <Compile Include="src\xml.cs" />
+    <EmbeddedResource Include="company\company.resx">
+      <DependentUpon>company.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="open_erp.resx">
       <DependentUpon>open_erp.cs</DependentUpon>
     </EmbeddedResource>

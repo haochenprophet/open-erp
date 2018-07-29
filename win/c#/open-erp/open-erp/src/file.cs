@@ -77,6 +77,18 @@ namespace n_file
                 return false;
             }
         }
-
+        public int Append(string s)//Append to log file
+        {
+            try
+            {
+                this.AddText(s);
+            }
+            catch (Exception e)
+            {
+                this.s_ex = e.ToString();
+                return -1;
+            }
+            return 0;
+        }
     }//class Cfile
 }

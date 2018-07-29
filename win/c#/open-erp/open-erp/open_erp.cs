@@ -15,16 +15,42 @@ using n_language;
 using n_autosize;
 using n_nopi;
 using n_file;
+using n_company;
 
 namespace open_erp
 {
     public partial class open_erp : Form
     {
         public static LanguageSel language = LanguageSel.NoneInit;
+        n_company.company company;
+        public bool set_mdi_child = false;
+        public n_file.Cfile logfile = new Cfile(System.AppDomain.CurrentDomain.BaseDirectory + "open_erp.log");
+        bool debug = true;
+        public string s_ex;
+
         public open_erp()
         {
             InitializeComponent();
+            //add code
             this.set_language(LanguageSel.English);
+            if(this.set_mdi_child)
+            {
+                this.IsMdiContainer = true;
+                this.company = new company(this);
+                this.AdjustSize();
+                this.company.Show();
+            }
+            else
+            {
+                this.company = new company();
+            }
+        }
+
+        private void AdjustSize()
+        {
+            if (!this.set_mdi_child) return;
+            this.company.Location = new System.Drawing.Point(this.Location.X, this.menuStrip.Size.Height + this.toolStrip.Size.Height);
+            this.company.Size = new System.Drawing.Size(this.Size.Width-40, this.Size.Height - this.menuStrip.Size.Height - this.toolStrip.Size.Height-75);
         }
 
     private void InitializeComponent()
@@ -34,13 +60,16 @@ namespace open_erp
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chineseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +85,8 @@ namespace open_erp
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.viewToolStripMenuItem,
             this.settingToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -79,36 +110,42 @@ namespace open_erp
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
-            // toolStrip
+            // toolStripSeparator1
             // 
-            this.toolStrip.Location = new System.Drawing.Point(0, 25);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(826, 25);
-            this.toolStrip.TabIndex = 2;
-            this.toolStrip.Text = "toolStrip";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
+            // toolStripMenuItem1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(42, 21);
+            this.toolStripMenuItem1.Text = "Edit";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.companyToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
+            this.viewToolStripMenuItem.Text = "View";
             // 
             // settingToolStripMenuItem
             // 
@@ -126,7 +163,7 @@ namespace open_erp
             this.englishToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
             this.languageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.languageToolStripMenuItem.Text = "Language";
             // 
             // chineseToolStripMenuItem
@@ -145,6 +182,22 @@ namespace open_erp
             this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
+            // toolStrip
+            // 
+            this.toolStrip.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Size = new System.Drawing.Size(826, 25);
+            this.toolStrip.TabIndex = 2;
+            this.toolStrip.Text = "toolStrip";
+            // 
+            // companyToolStripMenuItem
+            // 
+            this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
+            this.companyToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
+            this.companyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.companyToolStripMenuItem.Text = "Company";
+            this.companyToolStripMenuItem.Click += new System.EventHandler(this.companyToolStripMenuItem_Click);
+            // 
             // open_erp
             // 
             this.ClientSize = new System.Drawing.Size(826, 486);
@@ -155,6 +208,8 @@ namespace open_erp
             this.Name = "open_erp";
             this.Text = "open_erp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.open_erp_Load);
+            this.Resize += new System.EventHandler(this.open_erp_Resize);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -193,5 +248,25 @@ namespace open_erp
             this.set_language(LanguageSel.English);
         }
 
+        private void open_erp_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void open_erp_Resize(object sender, EventArgs e)
+        {
+            this.AdjustSize();
+        }
+
+        private void companyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.company.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                if (this.debug) this.logfile.Append(ex.ToString());
+            }
+        }
     }
 }
