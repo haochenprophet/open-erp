@@ -63,14 +63,11 @@
             this.recordTabPage = new System.Windows.Forms.TabPage();
             this.recordRichTextBox = new System.Windows.Forms.RichTextBox();
             this.workspaceTabPage = new System.Windows.Forms.TabPage();
-            this.messageTabControl = new System.Windows.Forms.TabControl();
-            this.inputTabPage = new System.Windows.Forms.TabPage();
-            this.messageRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.outputTabPage = new System.Windows.Forms.TabPage();
             this.messageToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.user_toolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.group_toolStripButton = new System.Windows.Forms.ToolStripButton();
             this.mic_toolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.video_toolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -95,6 +92,10 @@
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.call_toolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.messageTabControl = new System.Windows.Forms.TabControl();
+            this.inputTabPage = new System.Windows.Forms.TabPage();
+            this.messageRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.outputTabPage = new System.Windows.Forms.TabPage();
             this.commanyMenuStrip.SuspendLayout();
             this.commanyToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigateSplitContainer)).BeginInit();
@@ -109,9 +110,9 @@
             this.workspaceSplitContainer.SuspendLayout();
             this.workspaceTabControl.SuspendLayout();
             this.recordTabPage.SuspendLayout();
+            this.messageToolStrip.SuspendLayout();
             this.messageTabControl.SuspendLayout();
             this.inputTabPage.SuspendLayout();
-            this.messageToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // commanyMenuStrip
@@ -266,6 +267,7 @@
             // 
             // commanyToolStrip
             // 
+            this.commanyToolStrip.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.commanyToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripButton});
             this.commanyToolStrip.Location = new System.Drawing.Point(0, 25);
@@ -309,7 +311,7 @@
             // 
             this.navigateSplitContainer.Panel2.Controls.Add(this.workspaceSplitContainer);
             this.navigateSplitContainer.Size = new System.Drawing.Size(1328, 447);
-            this.navigateSplitContainer.SplitterDistance = 291;
+            this.navigateSplitContainer.SplitterDistance = 262;
             this.navigateSplitContainer.TabIndex = 3;
             // 
             // navigateTabControl
@@ -319,7 +321,7 @@
             this.navigateTabControl.Location = new System.Drawing.Point(5, 3);
             this.navigateTabControl.Name = "navigateTabControl";
             this.navigateTabControl.SelectedIndex = 0;
-            this.navigateTabControl.Size = new System.Drawing.Size(283, 447);
+            this.navigateTabControl.Size = new System.Drawing.Size(258, 447);
             this.navigateTabControl.TabIndex = 0;
             // 
             // organizationalTabPage
@@ -328,7 +330,7 @@
             this.organizationalTabPage.Location = new System.Drawing.Point(4, 22);
             this.organizationalTabPage.Name = "organizationalTabPage";
             this.organizationalTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.organizationalTabPage.Size = new System.Drawing.Size(275, 421);
+            this.organizationalTabPage.Size = new System.Drawing.Size(250, 421);
             this.organizationalTabPage.TabIndex = 0;
             this.organizationalTabPage.Text = "Organizational";
             this.organizationalTabPage.UseVisualStyleBackColor = true;
@@ -345,7 +347,7 @@
             this.contactTabPage.Location = new System.Drawing.Point(4, 22);
             this.contactTabPage.Name = "contactTabPage";
             this.contactTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.contactTabPage.Size = new System.Drawing.Size(275, 421);
+            this.contactTabPage.Size = new System.Drawing.Size(250, 421);
             this.contactTabPage.TabIndex = 1;
             this.contactTabPage.Text = "Contact";
             this.contactTabPage.UseVisualStyleBackColor = true;
@@ -367,7 +369,7 @@
             this.workspaceSplitContainer.Panel2.Controls.Add(this.messageToolStrip);
             this.workspaceSplitContainer.Panel2.Controls.Add(this.messageTabControl);
             this.workspaceSplitContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.workspaceSplitContainer_Panel2_Paint);
-            this.workspaceSplitContainer.Size = new System.Drawing.Size(1033, 447);
+            this.workspaceSplitContainer.Size = new System.Drawing.Size(1062, 447);
             this.workspaceSplitContainer.SplitterDistance = 239;
             this.workspaceSplitContainer.TabIndex = 0;
             // 
@@ -410,52 +412,14 @@
             this.workspaceTabPage.Text = "Workspace";
             this.workspaceTabPage.UseVisualStyleBackColor = true;
             // 
-            // messageTabControl
-            // 
-            this.messageTabControl.Controls.Add(this.inputTabPage);
-            this.messageTabControl.Controls.Add(this.outputTabPage);
-            this.messageTabControl.Location = new System.Drawing.Point(3, 34);
-            this.messageTabControl.Name = "messageTabControl";
-            this.messageTabControl.SelectedIndex = 0;
-            this.messageTabControl.Size = new System.Drawing.Size(1114, 169);
-            this.messageTabControl.TabIndex = 1;
-            // 
-            // inputTabPage
-            // 
-            this.inputTabPage.Controls.Add(this.messageRichTextBox);
-            this.inputTabPage.Location = new System.Drawing.Point(4, 22);
-            this.inputTabPage.Name = "inputTabPage";
-            this.inputTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.inputTabPage.Size = new System.Drawing.Size(1106, 143);
-            this.inputTabPage.TabIndex = 0;
-            this.inputTabPage.Text = "Input";
-            this.inputTabPage.UseVisualStyleBackColor = true;
-            // 
-            // messageRichTextBox
-            // 
-            this.messageRichTextBox.Location = new System.Drawing.Point(-4, 3);
-            this.messageRichTextBox.Name = "messageRichTextBox";
-            this.messageRichTextBox.Size = new System.Drawing.Size(1111, 150);
-            this.messageRichTextBox.TabIndex = 1;
-            this.messageRichTextBox.Text = "";
-            this.messageRichTextBox.TextChanged += new System.EventHandler(this.messageRichTextBox_TextChanged);
-            // 
-            // outputTabPage
-            // 
-            this.outputTabPage.Location = new System.Drawing.Point(4, 22);
-            this.outputTabPage.Name = "outputTabPage";
-            this.outputTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.outputTabPage.Size = new System.Drawing.Size(1106, 149);
-            this.outputTabPage.TabIndex = 1;
-            this.outputTabPage.Text = "Output";
-            this.outputTabPage.UseVisualStyleBackColor = true;
-            // 
             // messageToolStrip
             // 
+            this.messageToolStrip.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.messageToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator10,
             this.user_toolStripButton,
             this.toolStripSeparator11,
+            this.group_toolStripButton,
             this.mic_toolStripButton,
             this.toolStripSeparator4,
             this.video_toolStripButton,
@@ -482,7 +446,7 @@
             this.toolStripSeparator15});
             this.messageToolStrip.Location = new System.Drawing.Point(0, 0);
             this.messageToolStrip.Name = "messageToolStrip";
-            this.messageToolStrip.Size = new System.Drawing.Size(1033, 31);
+            this.messageToolStrip.Size = new System.Drawing.Size(1062, 31);
             this.messageToolStrip.TabIndex = 2;
             this.messageToolStrip.Text = "toolStrip1";
             // 
@@ -506,6 +470,16 @@
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
+            // 
+            // group_toolStripButton
+            // 
+            this.group_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.group_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("group_toolStripButton.Image")));
+            this.group_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.group_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.group_toolStripButton.Name = "group_toolStripButton";
+            this.group_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.group_toolStripButton.Text = "group-add";
             // 
             // mic_toolStripButton
             // 
@@ -687,6 +661,46 @@
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             this.toolStripSeparator15.Size = new System.Drawing.Size(6, 31);
             // 
+            // messageTabControl
+            // 
+            this.messageTabControl.Controls.Add(this.inputTabPage);
+            this.messageTabControl.Controls.Add(this.outputTabPage);
+            this.messageTabControl.Location = new System.Drawing.Point(3, 34);
+            this.messageTabControl.Name = "messageTabControl";
+            this.messageTabControl.SelectedIndex = 0;
+            this.messageTabControl.Size = new System.Drawing.Size(1114, 169);
+            this.messageTabControl.TabIndex = 1;
+            // 
+            // inputTabPage
+            // 
+            this.inputTabPage.Controls.Add(this.messageRichTextBox);
+            this.inputTabPage.Location = new System.Drawing.Point(4, 22);
+            this.inputTabPage.Name = "inputTabPage";
+            this.inputTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.inputTabPage.Size = new System.Drawing.Size(1106, 143);
+            this.inputTabPage.TabIndex = 0;
+            this.inputTabPage.Text = "Input";
+            this.inputTabPage.UseVisualStyleBackColor = true;
+            // 
+            // messageRichTextBox
+            // 
+            this.messageRichTextBox.Location = new System.Drawing.Point(-4, 3);
+            this.messageRichTextBox.Name = "messageRichTextBox";
+            this.messageRichTextBox.Size = new System.Drawing.Size(1111, 150);
+            this.messageRichTextBox.TabIndex = 1;
+            this.messageRichTextBox.Text = "";
+            this.messageRichTextBox.TextChanged += new System.EventHandler(this.messageRichTextBox_TextChanged);
+            // 
+            // outputTabPage
+            // 
+            this.outputTabPage.Location = new System.Drawing.Point(4, 22);
+            this.outputTabPage.Name = "outputTabPage";
+            this.outputTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.outputTabPage.Size = new System.Drawing.Size(1106, 143);
+            this.outputTabPage.TabIndex = 1;
+            this.outputTabPage.Text = "Output";
+            this.outputTabPage.UseVisualStyleBackColor = true;
+            // 
             // company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -719,10 +733,10 @@
             this.workspaceSplitContainer.ResumeLayout(false);
             this.workspaceTabControl.ResumeLayout(false);
             this.recordTabPage.ResumeLayout(false);
-            this.messageTabControl.ResumeLayout(false);
-            this.inputTabPage.ResumeLayout(false);
             this.messageToolStrip.ResumeLayout(false);
             this.messageToolStrip.PerformLayout();
+            this.messageTabControl.ResumeLayout(false);
+            this.inputTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -796,5 +810,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripButton call_toolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
+        private System.Windows.Forms.ToolStripButton group_toolStripButton;
     }
 }

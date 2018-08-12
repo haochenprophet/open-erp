@@ -148,6 +148,15 @@
         UtP8AX2dZIslVLVzAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="group_toolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC6SURBVEhL7ZExCsJAEEW30FSKZzE30Cto452MegbxUCLo
+        AURbS/F/yJdhmIQYTLcPHoS3s7NFUiZjKeAePmv5zUZO0Lef4eW3s4JkAX0L0VDEA+pc3iGZQt9CNBQx
+        +AMHqHO5g2QJfftiL0SK3j85Wmr9K4MstUQPjOAKHuEZvmr5zcYzzpAZ3MI1HDN4/AMlvED1JjnDWbKB
+        anOGNq7QL2uSs2QC1W4MbdgFXRRRC7GDXRRRy2R6kdIHYjKGm2yLxCMAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="mic_toolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
