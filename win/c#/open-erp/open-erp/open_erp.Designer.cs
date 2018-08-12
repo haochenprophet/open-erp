@@ -44,6 +44,33 @@
         private System.Windows.Forms.RichTextBox recordRichTextBox;
         private System.Windows.Forms.RichTextBox messageRichTextBox;
         private System.Windows.Forms.TreeView orgTreeView;
+        private System.Windows.Forms.ToolStripButton mic_toolStripButton;
+        private System.Windows.Forms.ToolStripButton cutToolStripButton;
+        private System.Windows.Forms.ToolStripButton attach_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton emoticon_toolStripButton;
+        private System.Windows.Forms.ToolStripButton text_toolStripButton2;
+        private System.Windows.Forms.ToolStripButton italic_toolStripButton;
+        private System.Windows.Forms.ToolStripButton bold_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripButton user_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton video_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton share_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripButton location_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
+        private System.Windows.Forms.ToolStripButton mail_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
+        private System.Windows.Forms.ToolStripButton call_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
     }
 }
 

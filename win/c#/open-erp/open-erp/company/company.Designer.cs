@@ -68,6 +68,33 @@
             this.messageRichTextBox = new System.Windows.Forms.RichTextBox();
             this.outputTabPage = new System.Windows.Forms.TabPage();
             this.messageToolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.user_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.mic_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.video_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.attach_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.emoticon_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.text_toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.italic_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.bold_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.share_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.location_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.mail_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.call_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.commanyMenuStrip.SuspendLayout();
             this.commanyToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigateSplitContainer)).BeginInit();
@@ -84,6 +111,7 @@
             this.recordTabPage.SuspendLayout();
             this.messageTabControl.SuspendLayout();
             this.inputTabPage.SuspendLayout();
+            this.messageToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // commanyMenuStrip
@@ -336,8 +364,8 @@
             // 
             // workspaceSplitContainer.Panel2
             // 
-            this.workspaceSplitContainer.Panel2.Controls.Add(this.messageTabControl);
             this.workspaceSplitContainer.Panel2.Controls.Add(this.messageToolStrip);
+            this.workspaceSplitContainer.Panel2.Controls.Add(this.messageTabControl);
             this.workspaceSplitContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.workspaceSplitContainer_Panel2_Paint);
             this.workspaceSplitContainer.Size = new System.Drawing.Size(1033, 447);
             this.workspaceSplitContainer.SplitterDistance = 239;
@@ -386,10 +414,10 @@
             // 
             this.messageTabControl.Controls.Add(this.inputTabPage);
             this.messageTabControl.Controls.Add(this.outputTabPage);
-            this.messageTabControl.Location = new System.Drawing.Point(3, 28);
+            this.messageTabControl.Location = new System.Drawing.Point(3, 34);
             this.messageTabControl.Name = "messageTabControl";
             this.messageTabControl.SelectedIndex = 0;
-            this.messageTabControl.Size = new System.Drawing.Size(1114, 175);
+            this.messageTabControl.Size = new System.Drawing.Size(1114, 169);
             this.messageTabControl.TabIndex = 1;
             // 
             // inputTabPage
@@ -398,7 +426,7 @@
             this.inputTabPage.Location = new System.Drawing.Point(4, 22);
             this.inputTabPage.Name = "inputTabPage";
             this.inputTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.inputTabPage.Size = new System.Drawing.Size(1106, 149);
+            this.inputTabPage.Size = new System.Drawing.Size(1106, 143);
             this.inputTabPage.TabIndex = 0;
             this.inputTabPage.Text = "Input";
             this.inputTabPage.UseVisualStyleBackColor = true;
@@ -424,11 +452,240 @@
             // 
             // messageToolStrip
             // 
+            this.messageToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator10,
+            this.user_toolStripButton,
+            this.toolStripSeparator11,
+            this.mic_toolStripButton,
+            this.toolStripSeparator4,
+            this.video_toolStripButton,
+            this.toolStripSeparator9,
+            this.cutToolStripButton,
+            this.toolStripSeparator5,
+            this.attach_toolStripButton,
+            this.toolStripSeparator2,
+            this.emoticon_toolStripButton,
+            this.toolStripSeparator6,
+            this.text_toolStripButton2,
+            this.toolStripSeparator7,
+            this.italic_toolStripButton,
+            this.toolStripSeparator8,
+            this.bold_toolStripButton,
+            this.toolStripSeparator3,
+            this.share_toolStripButton,
+            this.toolStripSeparator12,
+            this.location_toolStripButton,
+            this.toolStripSeparator13,
+            this.mail_toolStripButton,
+            this.toolStripSeparator14,
+            this.call_toolStripButton,
+            this.toolStripSeparator15});
             this.messageToolStrip.Location = new System.Drawing.Point(0, 0);
             this.messageToolStrip.Name = "messageToolStrip";
-            this.messageToolStrip.Size = new System.Drawing.Size(1033, 25);
-            this.messageToolStrip.TabIndex = 0;
+            this.messageToolStrip.Size = new System.Drawing.Size(1033, 31);
+            this.messageToolStrip.TabIndex = 2;
             this.messageToolStrip.Text = "toolStrip1";
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
+            // 
+            // user_toolStripButton
+            // 
+            this.user_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.user_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("user_toolStripButton.Image")));
+            this.user_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.user_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.user_toolStripButton.Name = "user_toolStripButton";
+            this.user_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.user_toolStripButton.Text = "User";
+            this.user_toolStripButton.ToolTipText = "User";
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
+            // 
+            // mic_toolStripButton
+            // 
+            this.mic_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mic_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("mic_toolStripButton.Image")));
+            this.mic_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mic_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mic_toolStripButton.Name = "mic_toolStripButton";
+            this.mic_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.mic_toolStripButton.Text = "MIC";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            // 
+            // video_toolStripButton
+            // 
+            this.video_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.video_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("video_toolStripButton.Image")));
+            this.video_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.video_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.video_toolStripButton.Name = "video_toolStripButton";
+            this.video_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.video_toolStripButton.Text = "Add Video";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            // 
+            // cutToolStripButton
+            // 
+            this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
+            this.cutToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cutToolStripButton.Name = "cutToolStripButton";
+            this.cutToolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.cutToolStripButton.Text = "Cut Image";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            // 
+            // attach_toolStripButton
+            // 
+            this.attach_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.attach_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("attach_toolStripButton.Image")));
+            this.attach_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.attach_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.attach_toolStripButton.Name = "attach_toolStripButton";
+            this.attach_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.attach_toolStripButton.Text = "Attach file";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
+            // emoticon_toolStripButton
+            // 
+            this.emoticon_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.emoticon_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("emoticon_toolStripButton.Image")));
+            this.emoticon_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.emoticon_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.emoticon_toolStripButton.Name = "emoticon_toolStripButton";
+            this.emoticon_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.emoticon_toolStripButton.Text = "Emoticon";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            // 
+            // text_toolStripButton2
+            // 
+            this.text_toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.text_toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("text_toolStripButton2.Image")));
+            this.text_toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.text_toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.text_toolStripButton2.Name = "text_toolStripButton2";
+            this.text_toolStripButton2.Size = new System.Drawing.Size(28, 28);
+            this.text_toolStripButton2.Text = "Font";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
+            // 
+            // italic_toolStripButton
+            // 
+            this.italic_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.italic_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("italic_toolStripButton.Image")));
+            this.italic_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.italic_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.italic_toolStripButton.Name = "italic_toolStripButton";
+            this.italic_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.italic_toolStripButton.Text = "Italic";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bold_toolStripButton
+            // 
+            this.bold_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bold_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("bold_toolStripButton.Image")));
+            this.bold_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bold_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bold_toolStripButton.Name = "bold_toolStripButton";
+            this.bold_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.bold_toolStripButton.Text = "Bold";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            // 
+            // share_toolStripButton
+            // 
+            this.share_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.share_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("share_toolStripButton.Image")));
+            this.share_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.share_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.share_toolStripButton.Name = "share_toolStripButton";
+            this.share_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.share_toolStripButton.Text = "share";
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 31);
+            // 
+            // location_toolStripButton
+            // 
+            this.location_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.location_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("location_toolStripButton.Image")));
+            this.location_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.location_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.location_toolStripButton.Name = "location_toolStripButton";
+            this.location_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.location_toolStripButton.Text = "location";
+            // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 31);
+            // 
+            // mail_toolStripButton
+            // 
+            this.mail_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mail_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("mail_toolStripButton.Image")));
+            this.mail_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mail_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.mail_toolStripButton.Name = "mail_toolStripButton";
+            this.mail_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.mail_toolStripButton.Text = "Mail";
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 31);
+            // 
+            // call_toolStripButton
+            // 
+            this.call_toolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.call_toolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("call_toolStripButton.Image")));
+            this.call_toolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.call_toolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.call_toolStripButton.Name = "call_toolStripButton";
+            this.call_toolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.call_toolStripButton.Text = "Call";
+            // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 31);
             // 
             // company
             // 
@@ -464,6 +721,8 @@
             this.recordTabPage.ResumeLayout(false);
             this.messageTabControl.ResumeLayout(false);
             this.inputTabPage.ResumeLayout(false);
+            this.messageToolStrip.ResumeLayout(false);
+            this.messageToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,7 +756,6 @@
         private System.Windows.Forms.SplitContainer navigateSplitContainer;
         private System.Windows.Forms.SplitContainer workspaceSplitContainer;
         private System.Windows.Forms.RichTextBox messageRichTextBox;
-        private System.Windows.Forms.ToolStrip messageToolStrip;
         private System.Windows.Forms.TabControl navigateTabControl;
         private System.Windows.Forms.TabPage organizationalTabPage;
         private System.Windows.Forms.TabPage contactTabPage;
@@ -510,5 +768,33 @@
         private System.Windows.Forms.RichTextBox recordRichTextBox;
         private System.Windows.Forms.ToolStripButton fileToolStripButton;
         private System.Windows.Forms.TreeView orgTreeView;
+        private System.Windows.Forms.ToolStrip messageToolStrip;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripButton user_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton mic_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton video_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton cutToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton attach_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton emoticon_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton text_toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton italic_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton bold_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton share_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripButton location_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
+        private System.Windows.Forms.ToolStripButton mail_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
+        private System.Windows.Forms.ToolStripButton call_toolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
     }
 }
