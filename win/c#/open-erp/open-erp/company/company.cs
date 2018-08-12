@@ -7,13 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//user namespace
+using n_serial_data;
+using n_serial;
+using n_mysql;
+using n_language;
+using n_autosize;
+using n_nopi;
+using n_file;
+using n_company;
 
 namespace n_company
 {
     public partial class company : Form
     {
+        bool debug = true;
         public int margin= 5;
         public bool is_mdi_child = false;
+        public n_file.Cfile logfile = new Cfile(System.AppDomain.CurrentDomain.BaseDirectory + "open_erp_company.log");
         public company()
         {
             InitializeComponent();
@@ -38,7 +49,7 @@ namespace n_company
             this.recordRichTextBox.Width = this.workspaceTabControl.Width;
             this.recordRichTextBox.Height = this.workspaceTabControl.Height;
             this.messageRichTextBox.Width = this.messageTabControl.Width;
-            this.messageRichTextBox.Height = this.messageTabControl.Height;
+            this.messageRichTextBox.Height = this.messageTabControl.Height - this.margin;
             this.orgTreeView.Width = this.navigateTabControl.Width;
             this.orgTreeView.Height = this.navigateTabControl.Height;
         }
@@ -62,7 +73,7 @@ namespace n_company
 
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void workspaceSplitContainer_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -83,7 +94,7 @@ namespace n_company
             }
             catch(Exception ex)
             {
-
+                if (this.debug) this.logfile.Append(ex.ToString());
             }
 
         }

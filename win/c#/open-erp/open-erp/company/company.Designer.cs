@@ -51,37 +51,37 @@
             this.questionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.commanyToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fileToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.commanyStatusStrip = new System.Windows.Forms.StatusStrip();
             this.navigateSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.workspaceSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.messageRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.messageToolStrip = new System.Windows.Forms.ToolStrip();
-            this.workspaceTabControl = new System.Windows.Forms.TabControl();
-            this.recordTabPage = new System.Windows.Forms.TabPage();
-            this.workspaceTabPage = new System.Windows.Forms.TabPage();
             this.navigateTabControl = new System.Windows.Forms.TabControl();
             this.organizationalTabPage = new System.Windows.Forms.TabPage();
+            this.orgTreeView = new System.Windows.Forms.TreeView();
             this.contactTabPage = new System.Windows.Forms.TabPage();
+            this.workspaceSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.workspaceTabControl = new System.Windows.Forms.TabControl();
+            this.recordTabPage = new System.Windows.Forms.TabPage();
+            this.recordRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.workspaceTabPage = new System.Windows.Forms.TabPage();
             this.messageTabControl = new System.Windows.Forms.TabControl();
             this.inputTabPage = new System.Windows.Forms.TabPage();
+            this.messageRichTextBox = new System.Windows.Forms.RichTextBox();
             this.outputTabPage = new System.Windows.Forms.TabPage();
-            this.recordRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.fileToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.orgTreeView = new System.Windows.Forms.TreeView();
+            this.messageToolStrip = new System.Windows.Forms.ToolStrip();
             this.commanyMenuStrip.SuspendLayout();
             this.commanyToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigateSplitContainer)).BeginInit();
             this.navigateSplitContainer.Panel1.SuspendLayout();
             this.navigateSplitContainer.Panel2.SuspendLayout();
             this.navigateSplitContainer.SuspendLayout();
+            this.navigateTabControl.SuspendLayout();
+            this.organizationalTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workspaceSplitContainer)).BeginInit();
             this.workspaceSplitContainer.Panel1.SuspendLayout();
             this.workspaceSplitContainer.Panel2.SuspendLayout();
             this.workspaceSplitContainer.SuspendLayout();
             this.workspaceTabControl.SuspendLayout();
             this.recordTabPage.SuspendLayout();
-            this.navigateTabControl.SuspendLayout();
-            this.organizationalTabPage.SuspendLayout();
             this.messageTabControl.SuspendLayout();
             this.inputTabPage.SuspendLayout();
             this.SuspendLayout();
@@ -242,9 +242,21 @@
             this.fileToolStripButton});
             this.commanyToolStrip.Location = new System.Drawing.Point(0, 25);
             this.commanyToolStrip.Name = "commanyToolStrip";
-            this.commanyToolStrip.Size = new System.Drawing.Size(1328, 25);
+            this.commanyToolStrip.Size = new System.Drawing.Size(1328, 31);
             this.commanyToolStrip.TabIndex = 1;
             this.commanyToolStrip.Text = "toolStrip1";
+            // 
+            // fileToolStripButton
+            // 
+            this.fileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.fileToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("fileToolStripButton.Image")));
+            this.fileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.fileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.fileToolStripButton.Name = "fileToolStripButton";
+            this.fileToolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.fileToolStripButton.Text = "folderToolStripButton";
+            this.fileToolStripButton.ToolTipText = "Open Folder";
+            this.fileToolStripButton.Click += new System.EventHandler(this.fileToolStripButton_Click);
             // 
             // commanyStatusStrip
             // 
@@ -258,7 +270,7 @@
             // navigateSplitContainer
             // 
             this.navigateSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigateSplitContainer.Location = new System.Drawing.Point(0, 50);
+            this.navigateSplitContainer.Location = new System.Drawing.Point(0, 56);
             this.navigateSplitContainer.Name = "navigateSplitContainer";
             // 
             // navigateSplitContainer.Panel1
@@ -268,77 +280,9 @@
             // navigateSplitContainer.Panel2
             // 
             this.navigateSplitContainer.Panel2.Controls.Add(this.workspaceSplitContainer);
-            this.navigateSplitContainer.Size = new System.Drawing.Size(1328, 453);
+            this.navigateSplitContainer.Size = new System.Drawing.Size(1328, 447);
             this.navigateSplitContainer.SplitterDistance = 291;
             this.navigateSplitContainer.TabIndex = 3;
-            // 
-            // workspaceSplitContainer
-            // 
-            this.workspaceSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workspaceSplitContainer.Location = new System.Drawing.Point(0, 0);
-            this.workspaceSplitContainer.Name = "workspaceSplitContainer";
-            this.workspaceSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // workspaceSplitContainer.Panel1
-            // 
-            this.workspaceSplitContainer.Panel1.Controls.Add(this.workspaceTabControl);
-            this.workspaceSplitContainer.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // workspaceSplitContainer.Panel2
-            // 
-            this.workspaceSplitContainer.Panel2.Controls.Add(this.messageTabControl);
-            this.workspaceSplitContainer.Panel2.Controls.Add(this.messageToolStrip);
-            this.workspaceSplitContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.workspaceSplitContainer_Panel2_Paint);
-            this.workspaceSplitContainer.Size = new System.Drawing.Size(1033, 453);
-            this.workspaceSplitContainer.SplitterDistance = 243;
-            this.workspaceSplitContainer.TabIndex = 0;
-            // 
-            // messageRichTextBox
-            // 
-            this.messageRichTextBox.Location = new System.Drawing.Point(-4, 3);
-            this.messageRichTextBox.Name = "messageRichTextBox";
-            this.messageRichTextBox.Size = new System.Drawing.Size(1111, 150);
-            this.messageRichTextBox.TabIndex = 1;
-            this.messageRichTextBox.Text = "";
-            this.messageRichTextBox.TextChanged += new System.EventHandler(this.messageRichTextBox_TextChanged);
-            // 
-            // messageToolStrip
-            // 
-            this.messageToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.messageToolStrip.Name = "messageToolStrip";
-            this.messageToolStrip.Size = new System.Drawing.Size(1033, 25);
-            this.messageToolStrip.TabIndex = 0;
-            this.messageToolStrip.Text = "toolStrip1";
-            // 
-            // workspaceTabControl
-            // 
-            this.workspaceTabControl.Controls.Add(this.recordTabPage);
-            this.workspaceTabControl.Controls.Add(this.workspaceTabPage);
-            this.workspaceTabControl.Location = new System.Drawing.Point(3, 3);
-            this.workspaceTabControl.Name = "workspaceTabControl";
-            this.workspaceTabControl.SelectedIndex = 0;
-            this.workspaceTabControl.Size = new System.Drawing.Size(1111, 241);
-            this.workspaceTabControl.TabIndex = 0;
-            // 
-            // recordTabPage
-            // 
-            this.recordTabPage.Controls.Add(this.recordRichTextBox);
-            this.recordTabPage.Location = new System.Drawing.Point(4, 22);
-            this.recordTabPage.Name = "recordTabPage";
-            this.recordTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.recordTabPage.Size = new System.Drawing.Size(1103, 215);
-            this.recordTabPage.TabIndex = 0;
-            this.recordTabPage.Text = "Record";
-            // 
-            // workspaceTabPage
-            // 
-            this.workspaceTabPage.Location = new System.Drawing.Point(4, 22);
-            this.workspaceTabPage.Name = "workspaceTabPage";
-            this.workspaceTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.workspaceTabPage.Size = new System.Drawing.Size(1103, 215);
-            this.workspaceTabPage.TabIndex = 1;
-            this.workspaceTabPage.Text = "Workspace";
-            this.workspaceTabPage.UseVisualStyleBackColor = true;
             // 
             // navigateTabControl
             // 
@@ -361,15 +305,82 @@
             this.organizationalTabPage.Text = "Organizational";
             this.organizationalTabPage.UseVisualStyleBackColor = true;
             // 
+            // orgTreeView
+            // 
+            this.orgTreeView.Location = new System.Drawing.Point(0, 0);
+            this.orgTreeView.Name = "orgTreeView";
+            this.orgTreeView.Size = new System.Drawing.Size(275, 421);
+            this.orgTreeView.TabIndex = 0;
+            // 
             // contactTabPage
             // 
             this.contactTabPage.Location = new System.Drawing.Point(4, 22);
             this.contactTabPage.Name = "contactTabPage";
             this.contactTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.contactTabPage.Size = new System.Drawing.Size(215, 421);
+            this.contactTabPage.Size = new System.Drawing.Size(275, 421);
             this.contactTabPage.TabIndex = 1;
             this.contactTabPage.Text = "Contact";
             this.contactTabPage.UseVisualStyleBackColor = true;
+            // 
+            // workspaceSplitContainer
+            // 
+            this.workspaceSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workspaceSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.workspaceSplitContainer.Name = "workspaceSplitContainer";
+            this.workspaceSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // workspaceSplitContainer.Panel1
+            // 
+            this.workspaceSplitContainer.Panel1.Controls.Add(this.workspaceTabControl);
+            this.workspaceSplitContainer.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.workspaceSplitContainer_Panel1_Paint);
+            // 
+            // workspaceSplitContainer.Panel2
+            // 
+            this.workspaceSplitContainer.Panel2.Controls.Add(this.messageTabControl);
+            this.workspaceSplitContainer.Panel2.Controls.Add(this.messageToolStrip);
+            this.workspaceSplitContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.workspaceSplitContainer_Panel2_Paint);
+            this.workspaceSplitContainer.Size = new System.Drawing.Size(1033, 447);
+            this.workspaceSplitContainer.SplitterDistance = 239;
+            this.workspaceSplitContainer.TabIndex = 0;
+            // 
+            // workspaceTabControl
+            // 
+            this.workspaceTabControl.Controls.Add(this.recordTabPage);
+            this.workspaceTabControl.Controls.Add(this.workspaceTabPage);
+            this.workspaceTabControl.Location = new System.Drawing.Point(3, 3);
+            this.workspaceTabControl.Name = "workspaceTabControl";
+            this.workspaceTabControl.SelectedIndex = 0;
+            this.workspaceTabControl.Size = new System.Drawing.Size(1111, 241);
+            this.workspaceTabControl.TabIndex = 0;
+            // 
+            // recordTabPage
+            // 
+            this.recordTabPage.Controls.Add(this.recordRichTextBox);
+            this.recordTabPage.Location = new System.Drawing.Point(4, 22);
+            this.recordTabPage.Name = "recordTabPage";
+            this.recordTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.recordTabPage.Size = new System.Drawing.Size(1103, 215);
+            this.recordTabPage.TabIndex = 0;
+            this.recordTabPage.Text = "Record";
+            // 
+            // recordRichTextBox
+            // 
+            this.recordRichTextBox.Enabled = false;
+            this.recordRichTextBox.Location = new System.Drawing.Point(0, 0);
+            this.recordRichTextBox.Name = "recordRichTextBox";
+            this.recordRichTextBox.Size = new System.Drawing.Size(1098, 209);
+            this.recordRichTextBox.TabIndex = 0;
+            this.recordRichTextBox.Text = "Test text.";
+            // 
+            // workspaceTabPage
+            // 
+            this.workspaceTabPage.Location = new System.Drawing.Point(4, 22);
+            this.workspaceTabPage.Name = "workspaceTabPage";
+            this.workspaceTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.workspaceTabPage.Size = new System.Drawing.Size(1103, 215);
+            this.workspaceTabPage.TabIndex = 1;
+            this.workspaceTabPage.Text = "Workspace";
+            this.workspaceTabPage.UseVisualStyleBackColor = true;
             // 
             // messageTabControl
             // 
@@ -392,6 +403,15 @@
             this.inputTabPage.Text = "Input";
             this.inputTabPage.UseVisualStyleBackColor = true;
             // 
+            // messageRichTextBox
+            // 
+            this.messageRichTextBox.Location = new System.Drawing.Point(-4, 3);
+            this.messageRichTextBox.Name = "messageRichTextBox";
+            this.messageRichTextBox.Size = new System.Drawing.Size(1111, 150);
+            this.messageRichTextBox.TabIndex = 1;
+            this.messageRichTextBox.Text = "";
+            this.messageRichTextBox.TextChanged += new System.EventHandler(this.messageRichTextBox_TextChanged);
+            // 
             // outputTabPage
             // 
             this.outputTabPage.Location = new System.Drawing.Point(4, 22);
@@ -402,31 +422,13 @@
             this.outputTabPage.Text = "Output";
             this.outputTabPage.UseVisualStyleBackColor = true;
             // 
-            // recordRichTextBox
+            // messageToolStrip
             // 
-            this.recordRichTextBox.Enabled = false;
-            this.recordRichTextBox.Location = new System.Drawing.Point(0, 0);
-            this.recordRichTextBox.Name = "recordRichTextBox";
-            this.recordRichTextBox.Size = new System.Drawing.Size(1098, 209);
-            this.recordRichTextBox.TabIndex = 0;
-            this.recordRichTextBox.Text = "Test text.";
-            // 
-            // fileToolStripButton
-            // 
-            this.fileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.fileToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("fileToolStripButton.Image")));
-            this.fileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.fileToolStripButton.Name = "fileToolStripButton";
-            this.fileToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.fileToolStripButton.Text = "toolStripButton1";
-            this.fileToolStripButton.Click += new System.EventHandler(this.fileToolStripButton_Click);
-            // 
-            // orgTreeView
-            // 
-            this.orgTreeView.Location = new System.Drawing.Point(0, 0);
-            this.orgTreeView.Name = "orgTreeView";
-            this.orgTreeView.Size = new System.Drawing.Size(275, 421);
-            this.orgTreeView.TabIndex = 0;
+            this.messageToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.messageToolStrip.Name = "messageToolStrip";
+            this.messageToolStrip.Size = new System.Drawing.Size(1033, 25);
+            this.messageToolStrip.TabIndex = 0;
+            this.messageToolStrip.Text = "toolStrip1";
             // 
             // company
             // 
@@ -437,6 +439,7 @@
             this.Controls.Add(this.commanyStatusStrip);
             this.Controls.Add(this.commanyToolStrip);
             this.Controls.Add(this.commanyMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.commanyMenuStrip;
             this.Name = "company";
             this.Text = "company";
@@ -450,6 +453,8 @@
             this.navigateSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navigateSplitContainer)).EndInit();
             this.navigateSplitContainer.ResumeLayout(false);
+            this.navigateTabControl.ResumeLayout(false);
+            this.organizationalTabPage.ResumeLayout(false);
             this.workspaceSplitContainer.Panel1.ResumeLayout(false);
             this.workspaceSplitContainer.Panel2.ResumeLayout(false);
             this.workspaceSplitContainer.Panel2.PerformLayout();
@@ -457,8 +462,6 @@
             this.workspaceSplitContainer.ResumeLayout(false);
             this.workspaceTabControl.ResumeLayout(false);
             this.recordTabPage.ResumeLayout(false);
-            this.navigateTabControl.ResumeLayout(false);
-            this.organizationalTabPage.ResumeLayout(false);
             this.messageTabControl.ResumeLayout(false);
             this.inputTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
