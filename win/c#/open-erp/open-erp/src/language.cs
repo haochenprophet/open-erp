@@ -514,6 +514,7 @@ namespace n_language
             Clanguage.ls_text = "文本";
             Clanguage.ls_log = "记录";
             Clanguage.ls_open = "打开配置";
+			Clanguage.ls_content = "内容";
 			Clanguage.ls_database = "数据库";
 			Clanguage.ls_content = "内容";
             Clanguage.ls_prompt = "提示";
