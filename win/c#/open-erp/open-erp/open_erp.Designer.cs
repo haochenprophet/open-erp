@@ -25,7 +25,7 @@
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chineseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem groupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem companyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -74,6 +74,7 @@
         private System.Windows.Forms.ToolStripButton group_toolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
         private System.Windows.Forms.ToolStripButton folder_toolStripButton;
-    }
+		private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+	}
 }
 

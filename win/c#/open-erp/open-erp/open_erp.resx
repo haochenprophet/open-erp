@@ -126,10 +126,18 @@
   <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>244, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="folder_toolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABiSURBVEhL7ZRBCoAwDATzQH2SflZ8hSBuDgEhiaW20B52
+        YK4ZyGGFTMUCT3gn7rCJA0aH327wNxeMjtaqX1iho1dA1YjDAq1YxMGAwUARBoqkga8lrTWcCh2oHpF0
+        7MgIRB5FaIU3MFCgOwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="messageToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>347, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="user_toolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -267,14 +275,6 @@
         8YppgSmG8YRpgSVeYwhdTAvMsYYh3OAa8+QLbGAoIzT5O4Ynlzu0wCfWDVTBGC3y/PurAm7xCy3SM1AF
         Hdyg0902cAC762p3eR4P6FtY5N5AAc/HFnZOJthH729iKXzIN7HQEE2cJzeW6oIsjX9XfiZ219v++i/P
         woPPu+uY/8I5cRiLE58agmvF3eWCnKGr3mbwo3XhVLJsC0mhYs9vJ+JVAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="folder_toolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABiSURBVEhL7ZRBCoAwDATzQH2SflZ8hSBuDgEhiaW20B52
-        YK4ZyGGFTMUCT3gn7rCJA0aH327wNxeMjtaqX1iho1dA1YjDAq1YxMGAwUARBoqkga8lrTWcCh2oHpF0
-        7MgIRB5FaIU3MFCgOwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

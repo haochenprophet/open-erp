@@ -13,8 +13,30 @@ namespace n_language
     public class Clanguage
     {
         public static LanguageSel lang= LanguageSel.NoneInit;
-        //Public 
-        public static string ls_colon;
+		//company
+		public static string ls_legal_affairs;//LegalAffairs
+		public static string ls_environment_safety;//environment
+		public static string ls_require;//Require
+		public static string ls_training;//Training
+		public static string ls_communicate;//Communicate
+		public static string ls_service;//Service
+		public static string ls_task;//Task
+		public static string ls_question;//Question
+		public static string ls_business;
+		public static string ls_develop;
+		public static string ls_project;
+		public static string ls_materials;
+		public static string ls_fiscal;
+		public static string ls_personnel;
+		public static string ls_stock;
+		public static string ls_group;
+		public static string ls_edit;
+		public static string ls_organization;
+		public static string ls_record;
+		public static string ls_workspace;
+		public static string ls_company;
+		//Public 
+		public static string ls_colon;
         public static string ls_serial_port;
         public static string ls_error;
         public static string ls_please;
@@ -37,8 +59,9 @@ namespace n_language
         public static string ls_time;
         public static string ls_log;
         public static string ls_open;
-        //Language
-        public static string ls_english;
+		public static string ls_database;
+		//Language
+		public static string ls_english;
         public static string ls_chinese;
         //Menu Bar string
         public static string ls_file;
@@ -236,8 +259,28 @@ namespace n_language
         public static void sel_english()
         {
             if (Clanguage.lang == LanguageSel.English) return;
-
-            Clanguage.ls_error = "Error";
+			Clanguage.ls_stock = "Stock";
+			Clanguage.ls_group = "Group";
+			Clanguage.ls_edit = "Edit";
+			Clanguage.ls_organization = "Organization";
+			Clanguage.ls_record = "Record";
+			Clanguage.ls_workspace = "Workspace";
+			Clanguage.ls_company = "Company";
+			Clanguage.ls_personnel = "Personnel";
+			Clanguage.ls_fiscal = "Fiscal";
+			Clanguage.ls_materials = "Materials";
+			Clanguage.ls_project = "Project";
+			Clanguage.ls_develop = "Develop";
+			Clanguage.ls_business = "Business";
+			Clanguage.ls_legal_affairs = "LegalAffairs";
+			Clanguage.ls_environment_safety = "environment";
+			Clanguage.ls_require = "Require";
+			Clanguage.ls_training = "Training";
+			Clanguage.ls_communicate = "Communicate";
+			Clanguage.ls_service = "Service";
+			Clanguage.ls_task = "Task";
+			Clanguage.ls_question = "Question";
+			Clanguage.ls_error = "Error";
             Clanguage.ls_please = "Please";
             Clanguage.ls_check = "Check";
             Clanguage.ls_clear = "Clear";
@@ -257,6 +300,7 @@ namespace n_language
             Clanguage.ls_text = "Text";
             Clanguage.ls_log = "Log";
             Clanguage.ls_open = "Open";
+			Clanguage.ls_database = "DataBase";
             Clanguage.ls_content = "Content";
             Clanguage.ls_prompt = "Prompt";
             Clanguage.ls_import="Import";
@@ -429,8 +473,28 @@ namespace n_language
         public static void sel_chinese()
         {
             if (Clanguage.lang == LanguageSel.Chinese) return;
-
-            Clanguage.ls_error = "错误";
+			Clanguage.ls_stock = "股份";
+			Clanguage.ls_group = "集团";
+			Clanguage.ls_edit = "编辑";
+			Clanguage.ls_organization = "组织架构";
+			Clanguage.ls_record = "记录";
+			Clanguage.ls_workspace = "工作区";
+			Clanguage.ls_company = "公司";
+			Clanguage.ls_personnel = "人力";
+			Clanguage.ls_fiscal = "财务";
+			Clanguage.ls_materials = "物料";
+			Clanguage.ls_develop = "研发";
+			Clanguage.ls_project = "项目";
+			Clanguage.ls_business = "商务";
+			Clanguage.ls_legal_affairs = "法务";
+			Clanguage.ls_environment_safety = "环保";
+			Clanguage.ls_require = "需求";
+			Clanguage.ls_training = "培训";
+			Clanguage.ls_communicate = "通信";
+			Clanguage.ls_service = "服务";
+			Clanguage.ls_task = "任务";
+			Clanguage.ls_question = "问题";
+			Clanguage.ls_error = "错误";
             Clanguage.ls_please = "请";
             Clanguage.ls_check = "检查";
             Clanguage.ls_clear = "清除";
@@ -438,7 +502,7 @@ namespace n_language
             Clanguage.ls_owner = "所有者";
             Clanguage.ls_file = "文件";
             Clanguage.ls_option = "选项";
-            Clanguage.ls_view = "查看";
+            Clanguage.ls_view = "视图";
             Clanguage.ls_step = "单步";
             Clanguage.ls_start = "开始";
             Clanguage.ls_stop = "停止";
@@ -450,7 +514,8 @@ namespace n_language
             Clanguage.ls_text = "文本";
             Clanguage.ls_log = "记录";
             Clanguage.ls_open = "打开配置";
-            Clanguage.ls_content = "内容";
+			Clanguage.ls_database = "数据库";
+			Clanguage.ls_content = "内容";
             Clanguage.ls_prompt = "提示";
             Clanguage.ls_import="导入";
             Clanguage.ls_import_fail = "导入失败 ";
@@ -584,7 +649,7 @@ namespace n_language
             Clanguage.ls_introduction = "简介";
             Clanguage.ls_work_group_name = "群组名";
             Clanguage.ls_mail = "e-mail";
-            Clanguage.ls_contact = "联系方式";
+            Clanguage.ls_contact = "联系人";
             Clanguage.ls_coordinate = "坐标";
             Clanguage.ls_credit_points = "信用分";
             Clanguage.ls_end_time = "完结时间";
