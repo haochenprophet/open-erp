@@ -30,7 +30,8 @@ namespace n_language
 		public static string ls_personnel;
 		public static string ls_stock;
 		public static string ls_group;
-		public static string ls_edit;
+        public static string ls_organize_group;
+        public static string ls_edit;
 		public static string ls_organization;
 		public static string ls_record;
 		public static string ls_workspace;
@@ -261,7 +262,8 @@ namespace n_language
             if (Clanguage.lang == LanguageSel.English) return;
 			Clanguage.ls_stock = "Stock";
 			Clanguage.ls_group = "Group";
-			Clanguage.ls_edit = "Edit";
+            Clanguage.ls_organize_group = "OrganizeGroup";
+            Clanguage.ls_edit = "Edit";
 			Clanguage.ls_organization = "Organization";
 			Clanguage.ls_record = "Record";
 			Clanguage.ls_workspace = "Workspace";
@@ -475,7 +477,8 @@ namespace n_language
             if (Clanguage.lang == LanguageSel.Chinese) return;
 			Clanguage.ls_stock = "股份";
 			Clanguage.ls_group = "集团";
-			Clanguage.ls_edit = "编辑";
+            Clanguage.ls_organize_group = "群组";
+            Clanguage.ls_edit = "编辑";
 			Clanguage.ls_organization = "组织架构";
 			Clanguage.ls_record = "记录";
 			Clanguage.ls_workspace = "工作区";

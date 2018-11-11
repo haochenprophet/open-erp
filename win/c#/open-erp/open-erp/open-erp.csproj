@@ -64,11 +64,119 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="action\action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="action\action.Designer.cs">
+      <DependentUpon>action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="audio\aduio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="audio\aduio.Designer.cs">
+      <DependentUpon>aduio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="business\business.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="business\business.Designer.cs">
+      <DependentUpon>business.cs</DependentUpon>
+    </Compile>
+    <Compile Include="communicate\communicate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="communicate\communicate.Designer.cs">
+      <DependentUpon>communicate.cs</DependentUpon>
+    </Compile>
     <Compile Include="company\company.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="company\company.Designer.cs">
       <DependentUpon>company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="database\database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="database\database.Designer.cs">
+      <DependentUpon>database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="develop\develop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="develop\develop.Designer.cs">
+      <DependentUpon>develop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="env_safety\env_safety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="env_safety\env_safety.Designer.cs">
+      <DependentUpon>env_safety.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exhibit\exhibit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exhibit\exhibit.Designer.cs">
+      <DependentUpon>exhibit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="file\file.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="file\file.Designer.cs">
+      <DependentUpon>file.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fiscal\fiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fiscal\fiscal.Designer.cs">
+      <DependentUpon>fiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="help\help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help\help.Designer.cs">
+      <DependentUpon>help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="integral\integral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="integral\integral.Designer.cs">
+      <DependentUpon>integral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="legal_affairs\legal_affairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="legal_affairs\legal_affairs.Designer.cs">
+      <DependentUpon>legal_affairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="location\location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="location\location.Designer.cs">
+      <DependentUpon>location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="map\map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="map\map.Designer.cs">
+      <DependentUpon>map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="materials\materials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="materials\materials.Designer.cs">
+      <DependentUpon>materials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="meeting\meeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meeting\meeting.Designer.cs">
+      <DependentUpon>meeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="object\object_window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="object\object_window.Designer.cs">
+      <DependentUpon>object_window.cs</DependentUpon>
     </Compile>
     <Compile Include="open_erp.cs">
       <SubType>Form</SubType>
@@ -76,8 +184,74 @@
     <Compile Include="open_erp.Designer.cs">
       <DependentUpon>open_erp.cs</DependentUpon>
     </Compile>
+    <Compile Include="organization\organization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="organization\organization.Designer.cs">
+      <DependentUpon>organization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="person\person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="person\person.Designer.cs">
+      <DependentUpon>person.cs</DependentUpon>
+    </Compile>
+    <Compile Include="product\product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="product\product.Designer.cs">
+      <DependentUpon>product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="project\project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project\project.Designer.cs">
+      <DependentUpon>project.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="public\public.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="public\public.Designer.cs">
+      <DependentUpon>public.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quality\quality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quality\quality.Designer.cs">
+      <DependentUpon>quality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="question\question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="question\question.Designer.cs">
+      <DependentUpon>question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repository\repository.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repository\repository.Designer.cs">
+      <DependentUpon>repository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="require\require.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="require\require.Designer.cs">
+      <DependentUpon>require.cs</DependentUpon>
+    </Compile>
+    <Compile Include="service\service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="service\service.Designer.cs">
+      <DependentUpon>service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="socket\socket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="socket\socket.Designer.cs">
+      <DependentUpon>socket.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\autosize.cs" />
     <Compile Include="src\excel.cs" />
     <Compile Include="src\file.cs" />
@@ -86,6 +260,30 @@
     <Compile Include="src\serial.cs" />
     <Compile Include="src\serial_data.cs" />
     <Compile Include="src\xml.cs" />
+    <Compile Include="stock\stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock\stock.Designer.cs">
+      <DependentUpon>stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="task\task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="task\task.Designer.cs">
+      <DependentUpon>task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="training\training.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="training\training.Designer.cs">
+      <DependentUpon>training.cs</DependentUpon>
+    </Compile>
+    <Compile Include="video\video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="video\video.Designer.cs">
+      <DependentUpon>video.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="company\company.resx">
       <DependentUpon>company.cs</DependentUpon>
     </EmbeddedResource>
