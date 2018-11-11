@@ -46,6 +46,7 @@ namespace n_company
 		{
 			if (this.language == sel) return;//init once
 			this.language = sel;
+            this.Text = Clanguage.ls_company;
 			this.fileToolStripMenuItem.Text = Clanguage.ls_file;//File
 			this.databaseToolStripMenuItem.Text = Clanguage.ls_database;//DataBase
 			this.stockToolStripMenuItem.Text = Clanguage.ls_stock;//Stock
