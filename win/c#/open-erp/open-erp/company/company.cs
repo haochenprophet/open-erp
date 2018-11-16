@@ -46,6 +46,7 @@ namespace n_company
 		{
 			if (this.language == sel) return;//init once
 			this.language = sel;
+            this.Text = Clanguage.ls_company;
 			this.fileToolStripMenuItem.Text = Clanguage.ls_file;//File
 			this.databaseToolStripMenuItem.Text = Clanguage.ls_database;//DataBase
 			this.stockToolStripMenuItem.Text = Clanguage.ls_stock;//Stock
@@ -68,6 +69,7 @@ namespace n_company
 			this.helpToolStripMenuItem.Text = Clanguage.ls_help;//Help
 			this.organizationTabPage.Text = Clanguage.ls_organization;//Organization
 			this.contactTabPage.Text = Clanguage.ls_contact;//Contact
+            this.groupTabPage.Text = Clanguage.ls_organize_group;
 			this.recordTabPage.Text = Clanguage.ls_record;//Record
 			this.workspaceTabPage.Text = Clanguage.ls_workspace;//Workspace
 			this.inputTabPage.Text = Clanguage.ls_input;//Input
