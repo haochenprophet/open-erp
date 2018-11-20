@@ -25,3 +25,9 @@ CREATE TABLE `organization`.`organization` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COMMENT = 'organization tree ';
+
+ALTER TABLE `organization`.`organization` 
+CHANGE COLUMN `remark` `remark` TEXT NULL DEFAULT NULL COMMENT 'Describe organizational relationships' ,
+ADD COLUMN `relationship` VARCHAR(45) NULL AFTER `remark`;
+
+
