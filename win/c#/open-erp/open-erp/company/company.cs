@@ -90,7 +90,11 @@ namespace n_company
             this.messageRichTextBox.Height = this.messageTabControl.Height - this.margin;
             this.orgTreeView.Width = this.navigateTabControl.Width;
             this.orgTreeView.Height = this.navigateTabControl.Height;
-        }
+			this.contactListView.Width= this.navigateTabControl.Width;
+			this.contactListView.Height= this.navigateTabControl.Height;
+			this.groupTreeView.Width = this.navigateTabControl.Width;
+			this.groupTreeView.Height = this.navigateTabControl.Height;
+		}
 
         private void company_Load(object sender, EventArgs e)
         {
@@ -138,6 +142,11 @@ namespace n_company
         }
 
 		private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void contactListView_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
 		}
