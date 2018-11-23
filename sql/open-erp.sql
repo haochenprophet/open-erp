@@ -30,4 +30,7 @@ ALTER TABLE `organization`.`organization`
 CHANGE COLUMN `remark` `remark` TEXT NULL DEFAULT NULL COMMENT 'Describe organizational relationships' ,
 ADD COLUMN `relationship` VARCHAR(45) NULL AFTER `remark`;
 
+ALTER TABLE `organization`.`organization` 
+ADD COLUMN `child` VARCHAR(45) NULL COMMENT 'child link child[0] to child[n]' AFTER `parents`;
+
 
